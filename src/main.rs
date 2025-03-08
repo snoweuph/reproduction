@@ -5,7 +5,7 @@ fn main() -> gtk::glib::ExitCode {
         .application_id("io.simple.reproduction")
         .build();
     app.connect_activate(|app| {
-        let win = gtk::ApplicationWindow::builder()
+        let win = adw::gtk::ApplicationWindow::builder()
             .application(app)
             .title("Reproduction")
             .build();

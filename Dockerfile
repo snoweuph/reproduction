@@ -13,7 +13,7 @@ RUN dnf install -y \
   llvm \
   clang \
   lld \
-  mingw64-gcc-c++ \
+ # mingw64-gcc-c++ \
   cmake \
   meson
 
@@ -33,6 +33,9 @@ RUN ln -nfs "/quasi-msys2/root/mingw64" /mingw64
 
 RUN cd /quasi-msys2 \
   && make install \
+    _gcc \
+    _ntldd \
+    mingw-w64-x86_64-adwaita-icon-theme \
     mingw-w64-x86_64-libadwaita \
     mingw-w64-x86_64-gettext
 
